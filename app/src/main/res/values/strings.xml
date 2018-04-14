@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Ocusell</string>
+    <string name="login_txt">Login</string>
+    <string name="no_acount_txt">Don\'t have an account? Create Account</string>
+    <string name="facebook_login">Login with facebook</string>
+    <string name="google_plus_login">Login with Google+</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="signup_txt">Sign Up</string>
+    <string name="already_acount_txt">Already have an account? Login</string>
+</resources>
