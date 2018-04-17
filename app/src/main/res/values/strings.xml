@@ -10,4 +10,12 @@
     <string name="last_name">Last Name</string>
     <string name="signup_txt">Sign Up</string>
     <string name="already_acount_txt">Already have an account? Login</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="cancel">Cancel</string>
+    <string name="send">Send</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="create_new_project">Create New Project</string>
+    <string name="description">Description</string>
+    <string name="create">Create</string>
 </resources>

@@ -19,6 +19,8 @@ import com.ocusell.ocusellapp.projects.AlbumActivity;
  */
 
 public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.ViewHolder> {
+
+
     private String[] categories;
     private Context context;
 
@@ -63,4 +65,6 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.ViewHolder
             imageView = (ImageView) itemView.findViewById(R.id.iv_album_photo);
         }
     }
+
+
 }

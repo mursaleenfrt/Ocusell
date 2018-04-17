@@ -13,7 +13,11 @@ import com.ocusell.ocusellapp.R;
  */
 
 public class SignUpActivity extends BaseActivity implements View.OnClickListener {
+
+
     private TextView tvSignIn;
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,4 +39,6 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
                 break;
         }
     }
+
+
 }

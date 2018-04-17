@@ -11,14 +11,19 @@ import com.ocusell.ocusellapp.BaseActivity;
 import com.ocusell.ocusellapp.R;
 import com.ocusell.ocusellapp.camera.ImageCaptureActivity;
 import com.ocusell.ocusellapp.signup.SignUpActivity;
+import com.ocusell.ocusellapp.utils.dialogs.ForgotPasswordDialog;
 
 /**
  * Created by muhammad.mursaleen on 4/7/2018.
  */
 
 public class SignInActivity extends BaseActivity implements View.OnClickListener {
+
+
     private LinearLayout llLogin;
     private TextView tvCreateAccount;
+    private TextView tvForgotPassword;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,11 +36,13 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     private void setListeners() {
         llLogin.setOnClickListener(this);
         tvCreateAccount.setOnClickListener(this);
+        tvForgotPassword.setOnClickListener(this);
     }
 
     private void init() {
-        llLogin = (LinearLayout) findViewById(R.id.ll_login);
-        tvCreateAccount = (TextView) findViewById(R.id.tv_create_account);
+        llLogin              = (LinearLayout) findViewById(R.id.ll_login);
+        tvCreateAccount      = (TextView) findViewById(R.id.tv_create_account);
+        tvForgotPassword     = (TextView) findViewById(R.id.tv_forgot_pass_id);
     }
 
     @Override
@@ -48,6 +55,13 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
             case R.id.tv_create_account:
                 startActivity(new Intent(getApplicationContext(), SignUpActivity.class));
                 break;
+            case R.id.tv_forgot_pass_id:
+                ForgotPasswordDialog fd = new ForgotPasswordDialog(this);
+                fd = fd.New(this);
+                fd.show();
+                break;
         }
     }
+
+
 }

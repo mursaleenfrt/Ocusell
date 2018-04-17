@@ -16,10 +16,12 @@ import com.ocusell.ocusellapp.R;
  */
 
 public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.ViewHolder> {
+
+
     private String[] categories;
     private Context context;
-    private static TextView lastChecked = null;
-    private static int lastCheckedPos = 0;
+    private TextView lastChecked = null;
+    private int lastCheckedPos = 0;
 
     public CategoriesAdapter(Context context, String[] categories) {
         this.context = context;
