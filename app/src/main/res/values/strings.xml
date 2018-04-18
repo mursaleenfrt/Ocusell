@@ -18,4 +18,6 @@
     <string name="create_new_project">Create New Project</string>
     <string name="description">Description</string>
     <string name="create">Create</string>
+    <string name="create_a_project">+ Create a Project</string>
+    <string name="project_name">Project Name</string>
 </resources>

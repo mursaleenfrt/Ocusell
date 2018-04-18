@@ -12,19 +12,33 @@ import android.widget.EditText;
 import com.ocusell.ocusellapp.R;
 import com.ocusell.ocusellapp.utils.GeneralUtil;
 
+import android.app.Dialog;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.ocusell.ocusellapp.R;
+import com.ocusell.ocusellapp.utils.GeneralUtil;
+
 public class ForgotPasswordDialog extends Dialog {
 
 
     private EditText mEmailEt;
     private Context myContext;
+    private OnClickCallback clickCallback;
 
 
     public ForgotPasswordDialog(Context context) {
         super(context);
     }
 
-    public ForgotPasswordDialog New(Context myContext){
+    public ForgotPasswordDialog New(Context myContext, OnClickCallback clickCallback){
         this.myContext = myContext;
+        this.clickCallback = clickCallback;
         if(this.getWindow() != null){
             this.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         }
@@ -65,6 +79,7 @@ public class ForgotPasswordDialog extends Dialog {
                 String email = mEmailEt.getText().toString();
                 if(!email.isEmpty() && email.contains("@")){
                     GeneralUtil.loadClickAnimation(myContext);
+                    clickCallback.onClick(email);
                     ForgotPasswordDialog.this.dismiss();
 
                 }else {
@@ -74,5 +89,10 @@ public class ForgotPasswordDialog extends Dialog {
 
         });
     }
+
+    public interface OnClickCallback {
+        void onClick(String emailAddress);
+    }
+
 
 }

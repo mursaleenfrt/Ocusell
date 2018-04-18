@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ocusell.ocusellapp.BaseActivity;
 import com.ocusell.ocusellapp.R;
@@ -57,7 +58,12 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
                 break;
             case R.id.tv_forgot_pass_id:
                 ForgotPasswordDialog fd = new ForgotPasswordDialog(this);
-                fd = fd.New(this);
+                fd = fd.New(this, new ForgotPasswordDialog.OnClickCallback() {
+                    @Override
+                    public void onClick(String emailAddress) {
+                        Toast.makeText(SignInActivity.this, "ok", Toast.LENGTH_SHORT).show();
+                    }
+                });
                 fd.show();
                 break;
         }
