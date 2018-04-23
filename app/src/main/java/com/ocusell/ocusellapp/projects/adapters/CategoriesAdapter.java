@@ -45,7 +45,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
         if (position == 0) {
             lastChecked = holder.textView;
             lastCheckedPos = 0;
-            setDrawable(holder.textView, R.drawable.selected_bg);
+            setDrawable(holder.textView, R.drawable.selected_filter_bg);
             holder.textView.setTextColor(ContextCompat.getColor(context, R.color.colorWhite));
 
         }
@@ -55,11 +55,11 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
 
                 if (lastCheckedPos != position) {
 
-                    setDrawable(holder.textView, R.drawable.selected_bg);
+                    setDrawable(holder.textView, R.drawable.selected_filter_bg);
                     holder.textView.setTextColor(ContextCompat.getColor(context, R.color.colorWhite));
 
-                    setDrawable(lastChecked, R.drawable.normal_filter_button);
-                    lastChecked.setTextColor(ContextCompat.getColor(context, R.color.colorOcusell));
+                    setDrawable(lastChecked, R.drawable.project_filter_bg);
+                    lastChecked.setTextColor(ContextCompat.getColor(context, R.color.project_filter_selected_clr));
                 }
                 lastChecked = holder.textView;
                 lastCheckedPos = position;

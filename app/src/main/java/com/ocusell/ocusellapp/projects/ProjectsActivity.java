@@ -2,7 +2,6 @@ package com.ocusell.ocusellapp.projects;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.FitWindowsLinearLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -15,20 +14,28 @@ import com.ocusell.ocusellapp.projects.adapters.AlbumsAdapter;
 import com.ocusell.ocusellapp.projects.adapters.CategoriesAdapter;
 import com.ocusell.ocusellapp.projects.models.ProjectModel;
 import com.ocusell.ocusellapp.utils.dialogs.CreateProjectDialog;
+import com.ocusell.ocusellapp.utils.dialogs.GeneralAlertDialog;
 
 /**
  * Created by muhammad.mursaleen on 4/7/2018.
  */
 
-public class ProjectsActivity extends BaseActivity implements View.OnClickListener {
+public class ProjectsActivity extends BaseActivity implements View.OnClickListener, AlbumsAdapter.ActionCallback {
+
     RecyclerView rvCategories, rvAlbums;
     Button btnCreateProject;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.projects_activity);
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setTitle(getString(R.string.projects));
+            getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.blackbg));
+        }
         init();
         setClickListeners();
+
     }
 
     private void setClickListeners() {
@@ -51,12 +58,13 @@ public class ProjectsActivity extends BaseActivity implements View.OnClickListen
         CategoriesAdapter categoriesAdapter = new CategoriesAdapter(this, categories);
         rvCategories.setAdapter(categoriesAdapter);
     }
+
     private void setAlbumsAdapter() {
         LinearLayoutManager layoutManagerAlbums
                 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvAlbums.setLayoutManager(layoutManagerAlbums);
         String[]albums = {"All", "Property", "Car","Office","Hotel"};
-        AlbumsAdapter categoriesAdapter = new AlbumsAdapter(this, albums);
+        AlbumsAdapter categoriesAdapter = new AlbumsAdapter(ProjectsActivity.this, albums, this);
         rvAlbums.setAdapter(categoriesAdapter);
     }
 
@@ -74,5 +82,26 @@ public class ProjectsActivity extends BaseActivity implements View.OnClickListen
                 projectDialog.show();
                 break;
         }
+    }
+
+    @Override
+    public void share_project() {
+
+        GeneralAlertDialog dialog = new GeneralAlertDialog(ProjectsActivity.this);
+        dialog = dialog.New(ProjectsActivity.this, true, R.color.login_text_color_green,
+                "Every project contains many images,\nsharing each image will cost one credit.",
+                true, R.color.black, "Are you sure you want to Share Project?",
+                getString(R.string.cancel), getString(R.string.share), new GeneralAlertDialog.OnClickCallback() {
+                    @Override
+                    public void onClick(String emailAddress) {
+                        Toast.makeText(ProjectsActivity.this, "Share", Toast.LENGTH_SHORT).show();
+                    }
+                });
+        dialog.show();
+    }
+
+    @Override
+    public void item_click() {
+
     }
 }

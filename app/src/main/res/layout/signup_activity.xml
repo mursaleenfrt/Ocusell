@@ -6,14 +6,14 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/login_bg" />
+        android:background="@drawable/login_bg"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:src="@mipmap/login_logo" />
+        android:src="@drawable/login_screen_logo_icon" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,12 +32,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/first_name"
+                android:textSize="@dimen/sp_13"
                 android:layout_weight="1"
                 />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/last_name"
+                android:textSize="@dimen/sp_13"
                 android:layout_weight="1"
                 />
         </LinearLayout>
@@ -45,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
+            android:textSize="@dimen/sp_13"
             android:inputType="textEmailAddress"
             android:layout_marginTop="5dp" />
 
@@ -52,6 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
+            android:textSize="@dimen/sp_13"
             android:inputType="textPassword"
             android:layout_marginTop="5dp"
             />
@@ -60,19 +64,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/dp_20"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
-                android:src="@mipmap/login_go" />
+                android:src="@drawable/login_screen_login_icon" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/signup_txt"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
                 android:textAllCaps="true"
                 android:textColor="@color/colorOcusell" />
         </LinearLayout>

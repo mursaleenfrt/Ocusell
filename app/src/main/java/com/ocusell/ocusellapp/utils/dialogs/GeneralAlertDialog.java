@@ -83,7 +83,7 @@ public class GeneralAlertDialog extends Dialog {
         }
 
         if(msgDetailCheck){
-            tvMsg.setVisibility(View.VISIBLE);
+            tvMsgDetail.setVisibility(View.VISIBLE);
             tvMsgDetail.setText(msgDetailText);
             tvMsgDetail.setTextColor(msgDetailColor);
         }

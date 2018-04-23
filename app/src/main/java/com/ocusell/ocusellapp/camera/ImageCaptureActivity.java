@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.SurfaceView;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.ocusell.ocusellapp.BaseActivity;
 import com.ocusell.ocusellapp.R;
+import com.ocusell.ocusellapp.panaroma.PanaromaCreateActivity;
 import com.ocusell.ocusellapp.projects.ProjectsActivity;
 import com.ocusell.ocusellapp.utils.GeneralUtil;
 
@@ -17,8 +19,8 @@ import com.ocusell.ocusellapp.utils.GeneralUtil;
  */
 
 public class ImageCaptureActivity extends BaseActivity implements View.OnClickListener {
-    private ImageView ivProjects, ivCapture;
-
+    private ImageView ivProjects, ivCapture, ivPanaromaCreate;
+    private ImageButton ibSetting, ibGuidance;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,21 +30,37 @@ public class ImageCaptureActivity extends BaseActivity implements View.OnClickLi
     }
 
     private void init() {
-        ivProjects = (ImageView) findViewById(R.id.iv_projects);
-        ivCapture = (ImageView) findViewById(R.id.iv_capture);
+        ivProjects          = (ImageView) findViewById(R.id.iv_photos);
+        ivCapture           = (ImageView) findViewById(R.id.iv_capture);
+        ivPanaromaCreate    = (ImageView) findViewById(R.id.iv_panaroma_create);
+        ibGuidance          = (ImageButton) findViewById(R.id.ib_guide);
+        ibSetting           = (ImageButton) findViewById(R.id.ib_setting);
         ivCapture.setOnClickListener(this);
+        ivPanaromaCreate.setOnClickListener(this);
         ivProjects.setOnClickListener(this);
+        ibGuidance.setOnClickListener(this);
+        ibSetting.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.iv_projects:
+            case R.id.iv_photos:
                 ivProjects.startAnimation(GeneralUtil.loadClickAnimation(this));
                 startActivity(new Intent(getApplicationContext(), ProjectsActivity.class));
                 break;
             case R.id.iv_capture:
                 ivCapture.startAnimation(GeneralUtil.loadClickAnimation(this));
+                break;
+            case R.id.ib_guide:
+                ibGuidance.startAnimation(GeneralUtil.loadClickAnimation(this));
+                break;
+            case R.id.ib_setting:
+                ibSetting.startAnimation(GeneralUtil.loadClickAnimation(this));
+                break;
+            case R.id.iv_panaroma_create:
+                ivPanaromaCreate.startAnimation(GeneralUtil.loadClickAnimation(this));
+                startActivity(new Intent(ImageCaptureActivity.this, PanaromaCreateActivity.class));
                 break;
         }
     }

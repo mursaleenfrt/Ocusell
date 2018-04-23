@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@mipmap/login_bg" />
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/login_bg"
+    android:gravity="center"
+    tools:context=".signin.SignInActivity">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:src="@mipmap/login_logo" />
+        android:src="@drawable/login_screen_logo_icon" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,6 +26,8 @@
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_13"
+            android:backgroundTint="@color/edit_text_tint_bg_color"
             android:hint="@string/email"
             android:inputType="textEmailAddress" />
 
@@ -35,6 +35,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
+            android:backgroundTint="@color/edit_text_tint_bg_color"
+            android:textSize="@dimen/sp_13"
             android:inputType="textPassword" />
 
         <LinearLayout
@@ -49,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
-                android:src="@mipmap/login_go" />
+                android:src="@drawable/login_screen_login_icon" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -57,7 +59,9 @@
                 android:text="@string/login_txt"
                 android:textStyle="bold"
                 android:textAllCaps="true"
-                android:textColor="@color/colorOcusell" />
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/login_text_color_green" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -72,7 +76,8 @@
                 android:layout_weight="1"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/login_text_color_green"
                 android:gravity="left|center_vertical"
                 android:text="@string/forgot_password"
                 android:layout_marginTop="10dp"/>
@@ -84,7 +89,8 @@
                 android:layout_weight="1"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/login_text_color_green"
                 android:gravity="right|center_vertical"
                 android:text="@string/create_account"
                 android:layout_marginTop="10dp"/>
@@ -105,11 +111,11 @@
             android:id="@+id/btn_g_plus"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/dp_16"
             android:text="@string/google_plus_login"
             android:textColor="#fff"
             android:textAllCaps="false"
-            android:background="@color/colorOcusell"/>
+            android:background="@color/google_login_bg_color"/>
 
     </LinearLayout>
 

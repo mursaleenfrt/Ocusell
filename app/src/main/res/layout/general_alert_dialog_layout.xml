@@ -16,25 +16,31 @@
             android:id="@+id/tv_msg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
             android:layout_marginTop="@dimen/dp_20"
+            android:visibility="gone"
             android:gravity="center"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
             android:text="@string/reset_password"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/sp_14" />
+            android:textSize="@dimen/sp_13" />
 
         <TextView
             android:id="@+id/tv_msg_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dp_20"
-            android:visibility="gone"
             android:gravity="center"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp_4"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
             android:text="@string/reset_password"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/sp_16" />
+            android:textSize="@dimen/sp_14" />
 
         <LinearLayout
+            android:layout_marginTop="@dimen/dp_20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -59,7 +65,7 @@
                     android:layout_weight="1"
                     android:text="@string/cancel"
                     android:background="@android:color/transparent"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/alert_cancel_text_color"
                     android:textAllCaps="false"/>
 
                 <View
@@ -73,7 +79,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_40"
                     android:layout_weight="1"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/login_text_color_green"
                     android:text="@string/send"
                     android:textAllCaps="false"
                     android:background="@android:color/transparent"/>

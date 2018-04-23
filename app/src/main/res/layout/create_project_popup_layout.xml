@@ -27,6 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:orientation="vertical">
 
             <EditText
@@ -35,9 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_10"
                 android:textSize="@dimen/sp_14"
-                android:padding="@dimen/dp_8"
                 android:hint="@string/project_name"
-                android:layout_marginRight="20dp"
                 android:inputType="textEmailAddress" />
 
             <EditText
@@ -46,17 +45,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_16"
                 android:textSize="@dimen/sp_14"
-                android:padding="@dimen/dp_8"
                 android:hint="@string/description"
-                android:layout_marginRight="20dp"
                 android:inputType="textEmailAddress" />
 
-            <Spinner
-                android:id="@+id/spinner_category"
-                android:layout_marginTop="@dimen/dp_16"
+            <ScrollView
+                android:id="@+id/scrollView"
                 android:layout_width="match_parent"
-                android:layout_marginLeft="4dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <ExpandableListView
+                    android:id="@+id/list_exp_categories"
+                    android:background="@drawable/project_category_bg"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:layout_marginRight="@dimen/dp_4"
+                    android:layout_width="match_parent"/>
+
+            </ScrollView>
 
             <EditText
                 android:id="@+id/et_category_name"
@@ -65,9 +72,7 @@
                 android:visibility="gone"
                 android:layout_marginTop="@dimen/dp_16"
                 android:textSize="@dimen/sp_14"
-                android:padding="@dimen/dp_8"
                 android:hint="@string/description"
-                android:layout_marginRight="20dp"
                 android:inputType="textEmailAddress" />
 
         </LinearLayout>

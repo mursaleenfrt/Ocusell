@@ -49,11 +49,11 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.ViewHolder> 
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvAlbumName;
+//        TextView tvAlbumName;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            tvAlbumName = (TextView) itemView.findViewById(R.id.tv_album_name);
+//            tvAlbumName = (TextView) itemView.findViewById(R.id.tv_al/bum_name);
         }
     }
 }

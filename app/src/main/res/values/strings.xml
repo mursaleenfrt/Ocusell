@@ -20,4 +20,9 @@
     <string name="create">Create</string>
     <string name="create_a_project">+ Create a Project</string>
     <string name="project_name">Project Name</string>
+    <string name="share">Share</string>
+    <string name="projects">Projects</string>
+    <string name="delete">delete</string>
+    <string name="panaroma_image">Panaroma Image</string>
+    <string name="done">Done</string>
 </resources>

@@ -3,6 +3,7 @@ package com.ocusell.ocusellapp.splash;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Window;
 
 import com.ocusell.ocusellapp.BaseActivity;
 import com.ocusell.ocusellapp.R;
@@ -16,6 +17,10 @@ public class SplashActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+        if(getSupportActionBar() != null){
+            getSupportActionBar().hide();
+        }
         setContentView(R.layout.activity_main);
         startSplashTimer();
     }
@@ -29,4 +34,5 @@ public class SplashActivity extends BaseActivity {
             }
         }, 2000);
     }
+
 }

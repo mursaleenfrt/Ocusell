@@ -7,4 +7,12 @@
     <color name="colorFacebook">#3b5998</color>
     <color name="colorWhite">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="filter_unselected_bg">#F3F3F3</color>
+    <color name="project_filter_selected_clr">#cacaca</color>
+    <color name="edit_text_tint_bg_color">#802b2d3a</color>
+    <color name="login_text_color_green">#7dc189</color>
+    <color name="google_login_bg_color">#d62121</color>
+    <color name="selected_filter_bg_color">#4A4A4A</color>
+    <color name="create_project_btn_bg_color">#0e0c0a</color>
+    <color name="alert_cancel_text_color">#999999</color>
 </resources>

@@ -16,16 +16,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".signin.SignInActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".camera.ImageCaptureActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".signup.SignUpActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".projects.ProjectsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".projects.AlbumActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".signin.SignInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".signup.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".camera.ImageCaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".projects.ProjectsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".projects.AlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".projectsdetail.ProjectDetailActivity"
+            android:theme="@style/AppThemeNoActionBarWithMenu" />
+        <activity android:name=".panaroma.PanaromaCreateActivity"></activity>
     </application>
 
 </manifest>
