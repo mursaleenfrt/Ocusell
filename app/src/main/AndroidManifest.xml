@@ -35,7 +35,8 @@
         <activity
             android:name=".projectsdetail.ProjectDetailActivity"
             android:theme="@style/AppThemeNoActionBarWithMenu" />
-        <activity android:name=".panaroma.PanaromaCreateActivity"></activity>
+        <activity android:name=".panaroma.PanaromaPreviewActivity" />
+        <activity android:name=".panaroma.PanaromaEditActivity"></activity>
     </application>
 
 </manifest>

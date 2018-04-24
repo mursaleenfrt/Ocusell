@@ -3,14 +3,13 @@ package com.ocusell.ocusellapp.camera;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.SurfaceView;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.ocusell.ocusellapp.BaseActivity;
 import com.ocusell.ocusellapp.R;
-import com.ocusell.ocusellapp.panaroma.PanaromaCreateActivity;
+import com.ocusell.ocusellapp.panaroma.PanaromaPreviewActivity;
 import com.ocusell.ocusellapp.projects.ProjectsActivity;
 import com.ocusell.ocusellapp.utils.GeneralUtil;
 
@@ -60,7 +59,7 @@ public class ImageCaptureActivity extends BaseActivity implements View.OnClickLi
                 break;
             case R.id.iv_panaroma_create:
                 ivPanaromaCreate.startAnimation(GeneralUtil.loadClickAnimation(this));
-                startActivity(new Intent(ImageCaptureActivity.this, PanaromaCreateActivity.class));
+                startActivity(new Intent(ImageCaptureActivity.this, PanaromaPreviewActivity.class));
                 break;
         }
     }

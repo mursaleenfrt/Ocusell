@@ -16,10 +16,10 @@
             android:id="@+id/tv_msg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_20"
-            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp_30"
             android:gravity="center"
             android:paddingLeft="@dimen/dp_20"
+            android:visibility="gone"
             android:paddingRight="@dimen/dp_20"
             android:text="@string/reset_password"
             android:textColor="@android:color/black"
@@ -30,8 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textStyle="bold"
             android:visibility="gone"
+            android:textStyle="bold"
             android:layout_marginTop="@dimen/dp_4"
             android:paddingLeft="@dimen/dp_20"
             android:paddingRight="@dimen/dp_20"
@@ -40,7 +40,7 @@
             android:textSize="@dimen/sp_14" />
 
         <LinearLayout
-            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">

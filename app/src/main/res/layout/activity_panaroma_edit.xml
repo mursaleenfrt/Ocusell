@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".panaroma.PanaromaCreateActivity">
-
+    tools:context=".panaroma.PanaromaEditActivity">
 
     <ImageView
+        android:id="@+id/iv_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/room_image"
-        android:scaleType="fitXY"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
+        android:id="@+id/layout_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,38 +24,37 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-        <ImageView
-            android:id="@+id/iv_delete_panaroma"
+            android:id="@+id/iv_crop_panaroma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/dp_16"
-            android:src="@drawable/ic_delete_white"
+            android:src="@drawable/crop_white_icon"
             android:layout_weight="1"/>
 
         <ImageView
-            android:id="@+id/iv_edit_panaroma"
+            android:id="@+id/iv_wow_panaroma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/edit_white_icon"
+            android:padding="@dimen/dp_16"
+            android:src="@drawable/wow_gray_icon"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/iv_brightness_panaroma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/brightness_gray_icon"
             android:padding="@dimen/dp_16"
             android:layout_weight="1"/>
 
         <ImageView
-            android:id="@+id/iv_full_screen__panaroma"
+            android:id="@+id/iv_rotate_panaroma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/dp_16"
-            android:src="@drawable/full_screen_white_icon"
+            android:src="@drawable/brightness_gray_icon"
             android:layout_weight="1"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
 
     </LinearLayout>
 

@@ -15,4 +15,5 @@
     <color name="selected_filter_bg_color">#4A4A4A</color>
     <color name="create_project_btn_bg_color">#0e0c0a</color>
     <color name="alert_cancel_text_color">#999999</color>
+    <color name="alert_detail_text_color">#636466</color>
 </resources>

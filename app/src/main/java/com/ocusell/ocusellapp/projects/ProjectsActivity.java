@@ -20,7 +20,8 @@ import com.ocusell.ocusellapp.utils.dialogs.GeneralAlertDialog;
  * Created by muhammad.mursaleen on 4/7/2018.
  */
 
-public class ProjectsActivity extends BaseActivity implements View.OnClickListener, AlbumsAdapter.ActionCallback {
+public class ProjectsActivity extends BaseActivity implements View.OnClickListener,
+        AlbumsAdapter.ActionCallback, GeneralAlertDialog.OnClickCallback {
 
     RecyclerView rvCategories, rvAlbums;
     Button btnCreateProject;
@@ -91,17 +92,17 @@ public class ProjectsActivity extends BaseActivity implements View.OnClickListen
         dialog = dialog.New(ProjectsActivity.this, true, R.color.login_text_color_green,
                 "Every project contains many images,\nsharing each image will cost one credit.",
                 true, R.color.black, "Are you sure you want to Share Project?",
-                getString(R.string.cancel), getString(R.string.share), new GeneralAlertDialog.OnClickCallback() {
-                    @Override
-                    public void onClick(String emailAddress) {
-                        Toast.makeText(ProjectsActivity.this, "Share", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                getString(R.string.cancel), getString(R.string.share),this);
         dialog.show();
     }
 
     @Override
     public void item_click() {
 
+    }
+
+    @Override
+    public void onActionClick(String emailAddress) {
+        Toast.makeText(ProjectsActivity.this, "Share", Toast.LENGTH_SHORT).show();
     }
 }

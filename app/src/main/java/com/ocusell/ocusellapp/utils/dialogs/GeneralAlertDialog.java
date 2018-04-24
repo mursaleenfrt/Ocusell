@@ -103,7 +103,7 @@ public class GeneralAlertDialog extends Dialog {
             public void onClick(View v) {
 
                 GeneralUtil.loadClickAnimation(myContext);
-                clickCallback.onClick("ok");
+                clickCallback.onActionClick("ok");
                 GeneralAlertDialog.this.dismiss();
             }
         });
@@ -117,7 +117,7 @@ public class GeneralAlertDialog extends Dialog {
     }
 
     public interface OnClickCallback {
-        void onClick(String emailAddress);
+        void onActionClick(String emailAddress);
     }
 
 }
